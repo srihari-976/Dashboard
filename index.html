@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">traffic</span> Traffic 
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">inventory_2</span> Control Centres
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">category</span> Categories
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">groups</span> Junctions
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">fact_check</span> Inventory
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">poll</span> Reports
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">settings</span> Settings
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      
+      <main class="main-container">
+        <div class="main-title">
+          <h2>DASHBOARD</h2>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>North</h3>
+              <!-- <span class="material-icons-outlined">inventory_2</span> -->
+              <input type="checkbox" name="checkbox" id="toggle">
+              <label for="toggle" class="switch"></label>
+              <span class="material-icons-outlined">traffic</span>
+            </div>
+            <h1>24</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>East</h3>
+              <!-- <span class="material-icons-outlined">category</span> -->
+              <input type="checkbox" name="checkbox2" id="toggle2">
+              <label for="toggle2" class="switch2"></label>
+              <span class="material-icons-outlined">traffic</span>
+                
+            </div>
+            <h1>25</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>West</h3>
+              <!-- <span class="material-icons-outlined">groups</span> -->
+              <input type="checkbox" name="checkbox4" id="toggle3">
+              <label for="toggle3" class="switch3"></label>
+              <span class="material-icons-outlined">traffic</span>
+
+            </div>
+            <h1>15</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>South</h3>
+              <!-- <span class="material-icons-outlined">notification_important</span> -->
+              <input type="checkbox" name="checkbox4" id="toggle4">
+              <label for="toggle4" class="switch4"></label>
+              <span class="material-icons-outlined">traffic</span>
+              
+            </div>
+            <h1>56</h1>
+          </div>
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <h2 class="chart-title">Jalahalli Cross (Junction)</h2>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title">Traffic Data</h2>
+            <div id="area-chart"></div>
+          </div>
+
+        <div class="charts-card">
+        <h2 class="chart-title">Map view</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.1489875954176!2d77.51578623371223!3d13.038273173414854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d27a9d7c5ab%3A0xa6dcd07a66a7faf!2sJalahalli%20Cross%20Rd%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1711188445918!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+        </div>
+
+        <div class="charts-card">
+          <h2 class="chart-title">Traffic Light</h2>
+          <div class="container">
+            <div class="red sig"></div>
+            <div class="yellow sig"></div>
+            <div class="green sig"></div>
+          </div>
+        </div>
+
+        </div>
+      </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
